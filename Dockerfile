@@ -49,6 +49,7 @@ RUN ["ln", "-s", "/reveal.js/css/print/pdf.css",  "/pandoc/reveal.js/css/print/p
 RUN ["ln", "-s", "/reveal.js/css/theme/",         "/pandoc/reveal.js/css/theme"]
 RUN ["ln", "-s", "/reveal.js/plugin",             "/pandoc/reveal.js/plugin"]
 
+RUN apt-get -y install pandoc
 
 WORKDIR reveal.js 
 CMD grunt serve
