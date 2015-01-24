@@ -1,0 +1,9 @@
+#!/bin/bash +x
+
+# ==============================================================
+# Build the Docker image using the Dockerfile in this directory.
+# ==============================================================
+
+docker build -t "danidemi/docker-reveal.js:latest" .
+
+

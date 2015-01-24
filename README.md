@@ -1,10 +1,28 @@
 # Docker-reveal.js
 
-`docker-reveal.js` is a Docker image that let you run reveal.js slideshow with ease.
+`docker-reveal.js` is a Docker image that let you run reveal.js slideshows with ease.
+It embeds `pandoc` to quickly convert **markdown** text in **reveal.js** enabled html.
 
-## Run your slideshow
+
+
+## Installation
+
+This image is available on the Docker Hub at <https://registry.hub.docker.com/u/danidemi/docker-reveal.js/>,
+and it is automatically built each time an update is available, so the easiest way to get the image is to
+rely on Docker.
+
+	$ sudo docker pull docker-reveal.js:latest
+
+If for any reason, you prefer to build the image yourself, just clone this repository and build the image yourself.
+
+	$ git clone https://github.com/danidemi/docker-reveal.js.git
+	$ cd docker-reveal.js
+	$ docker build -t "danidemi/docker-reveal.js:latest" .
+
+## Create And Run The slideshow
 
 1. Download the sources.
+
 2. Generate the Docker image with the following command
 
 	$ sudo docker build -t docker-reveal.js .
