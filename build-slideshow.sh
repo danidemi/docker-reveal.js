@@ -1,0 +1,7 @@
+#!/bin/bash -x
+pandoc -t FORMAT -s habits.txt -o habits.html
+dockerid=$(docker ps -f status=running | grep docker-reveal.js | awk '{print $1}')
+#(docker exec $dockerid pandoc -t revealjs -o /slides/$2) < $1
+(docker exec -i $dockerid /bin/sh -c "pandoc -t revealjs -s -o /slides/$2") < $1
+
+
