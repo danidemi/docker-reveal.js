@@ -55,9 +55,23 @@ If for any reason, you prefer to build the image yourself, just clone this repos
 
 
 
-# Issues
+## Issues
 
 Plese, feel free to open any issue you should have on the [GitHub project page](https://github.com/danidemi/docker-reveal.js/issues).
+
+
+
+
+## Internals
+
+This Docker Image is based on the default Reveal.js installation.
+`Gruntfile.js`, however defines two additional folders that are served through http, `/slides` and `/pandoc`.
+
+* `/slides` directory is meant to be used as a Docker volume, mapped to the folder on your host that contains the slideshow materials.
+This way, for instance, when you hit <http://127.0.0.1:8000>, the content that is actually served comes from `/slides` that in turn is mapped 
+to your presentation directory on your host.
+
+* `/pandoc` directory is meant to provide `.css` and `.js` resources as expected by Pandoc produced files.
 
 
 
