@@ -48,6 +48,7 @@ RUN ["ln", "-s", "/reveal.js/lib/js/head.min.js", "/pandoc/reveal.js/lib/js/head
 RUN ["ln", "-s", "/reveal.js/css/print/pdf.css",  "/pandoc/reveal.js/css/print/pdf.css"]
 RUN ["ln", "-s", "/reveal.js/css/theme/",         "/pandoc/reveal.js/css/theme"]
 RUN ["ln", "-s", "/reveal.js/plugin",             "/pandoc/reveal.js/plugin"]
+RUN ["ln", "-s", "/reveal.js/lib/css",            "/pandoc/reveal.js/lib/css"]
 
 RUN apt-get -y install pandoc
 
